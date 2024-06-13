@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!------HTMl code for home page or welcome page-------->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="homePage.css">
+</head>
+<body>
+      <!------Header with links to the other pages-------->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="homePage.html">Home</a></li>
+                <li><a href="menuPage.html">Menu</a></li>
+                <li><a href="aboutUsPage.html">About Us</a></li>
+                <li><a href="contactPage.html">Contact</a></li>
+                <li><a href="galleryPage.html">Gallery</a></li>
+                <li><a href="reviewPage.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="carousel">
+        <div class="content">
+            <div class="content-inner">
+                <h2>Welcome Ka-Chooks!</h2>
+                <p>Pagbati mula sa Chooks To Go! Manok ng bayan, para hindi basta bastang ulam ang iuwi Let's Chooks na!</p>
+                <p>Visit one of our branches to experience the flavor of Paboritong Manok ng mga Pinoy. </p>
+                <p>Thank you for visiting our website! Come and have an extraordinary dining experience with us.  Everything about us, from our inviting atmosphere to our superb service, is geared at making you happy.</p>
+                <button class="announcement-button" onclick="goToAnnouncements()">Check out our latest announcements</button>
+                </button>
+            </div>
+        </div>
+    </div>
+
+  <!------Script for multiple background and carousel effect-------->
+  <!------Script for button functionality to view other pages-------->
+    <script>
+        const images = [
+            '1.png',
+            '2.png',
+            '3.png'
+        ];
+        let currentIndex = 0;
+
+        function goToAnnouncements() {
+            window.location.href = 'announcementPage.html';
+        } 
+
+        function changeBackgroundImage() {
+            const carousel = document.querySelector('.carousel');
+            carousel.style.backgroundImage = `url(${images[currentIndex]})`;
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        setInterval(changeBackgroundImage, 5000); 
+        window.onload = changeBackgroundImage;
+    </script>
+</body>
+</html>

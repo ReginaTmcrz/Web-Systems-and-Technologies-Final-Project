@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+      <!------HTML code for review page-------->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="reviewPage.css">
+</head>
+<body>
+
+      <!------Header with links to the other pages-------->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="homePage.html">Home</a></li>
+                <li><a href="menuPage.html">Menu</a></li>
+                <li><a href="aboutUsPage.html">About Us</a></li>
+                <li><a href="contactPage.html">Contact</a></li>
+                <li><a href="galleryPage.html">Gallery</a></li>
+                <li><a href="reviewPage.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!------Code where the user can add their reviews-------->
+    <div class="content">
+        <div class="content-inner">
+            <h2>Customer Reviews</h2>
+            <div id="reviewContainer">   
+            </div>
+            <div id="addReviewForm">
+                <h3>Add Your Review</h3>
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <br> 
+
+                    <div class="form-group">
+                        <label for="review">Your Review:</label>
+                        <textarea id="review" name="review" rows="4" required></textarea>
+                    </div>
+                    <br> 
+
+                    <button type="submit" class="submit-button">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  <!------Connector to script file-------->
+    <script src="reviews.js"></script>
+</body>
+</html>
